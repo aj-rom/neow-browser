@@ -24,9 +24,11 @@ export default function NEO(props) {
                 <h6 className={styles.h6}>Estimated Diameter</h6>
                 <table>
                     <thead>
-                        <td>Unit</td>
-                        <td>Min</td>
-                        <td>Max</td>
+                        <tr>
+                            <th>Unit</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
@@ -56,23 +58,23 @@ export default function NEO(props) {
                 <table>
                     <thead>
                         <tr>
-                            <td>Date</td>
-                            <td>Orbiting</td>
-                            <td>Relative Velocity (km/s)</td>
-                            <td>Miss Distance (lunar)</td>
+                            <th>Date</th>
+                            <th>Orbiting</th>
+                            <th>Relative Velocity (km/s)</th>
+                            <th>Miss Distance (lunar)</th>
                         </tr>
                     </thead>
                     <tbody>
-                    {data.close_approach_data.map((e, idx) => {
-                        return (
-                            <tr key={idx}>
-                                <td>{e.close_approach_date}</td>
-                                <td>{e.orbiting_body}</td>
-                                <td>{e.relative_velocity.kilometers_per_second}</td>
-                                <td>{e.miss_distance.lunar}</td>
-                            </tr>
-                        )
-                    })}
+                    {/*{data.close_approach_data.map((e, idx) => {*/}
+                    {/*    return (*/}
+                    {/*        <tr key={idx}>*/}
+                    {/*            <td>{e.close_approach_date}</td>*/}
+                    {/*            <td>{e.orbiting_body}</td>*/}
+                    {/*            <td>{e.relative_velocity.kilometers_per_second}</td>*/}
+                    {/*            <td>{e.miss_distance.lunar}</td>*/}
+                    {/*        </tr>*/}
+                    {/*    )*/}
+                    {/*})}*/}
                     </tbody>
                 </table>
             </details>
