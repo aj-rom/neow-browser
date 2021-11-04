@@ -2,10 +2,8 @@ import styles from './NEO.module.css'
 export default function NEO(props) {
 
     const { data } = props
-
     const diameter = data.estimated_diameter
 
-    console.log(data)
     return (
         <article className={styles.neo}>
             <header>
