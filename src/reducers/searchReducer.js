@@ -7,7 +7,7 @@ export const searchReducer = ( state = initialState, action ) => {
             return { ...state, isLoading: false, results: action.payload, error: '' }
         case 'ERROR':
             console.log('An error has occurred:', action.error)
-            return { ...state, error: action.payload, isLoaded: false }
+            return { ...state, error: action.payload, isLoading: false }
         default:
             return state
     }
