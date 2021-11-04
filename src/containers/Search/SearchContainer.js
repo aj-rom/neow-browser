@@ -27,13 +27,13 @@ class SearchContainer extends Component {
         if (error) {
             return <div id='search'>
                 <div className={styles.error}>Error: {error}</div>
-                <SearchBar/>
+                <SearchBar fetchNeo={fetchNeo}/>
             </div>
         } else if (isLoading) {
             return <div aria-busy={true}>Loading...</div>
         } else {
             return <div id='search'>
-                <SearchBar/>
+                <SearchBar fetchNeo={fetchNeo}/>
                 <div className={styles.neoSection}>
                     { this.renderResults(results) }
                 </div>
