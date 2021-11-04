@@ -1,7 +1,7 @@
-import styles from '../styles/Home.module.css'
-import SearchContainer from "./containers/Search/SearchContainer";
-import Footer from "./components/Footer/Footer";
-import PageHead from "./components/Head/Head";
+import styles from '../src/styles/Home.module.css'
+import SearchContainer from "../src/containers/Search/SearchContainer";
+import Footer from "../src/components/Footer/Footer";
+import PageHead from "../src/components/Head/Head";
 
 export default function Home() {
   return (

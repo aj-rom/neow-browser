@@ -65,9 +65,9 @@ export default function NEO(props) {
                         </tr>
                     </thead>
                     <tbody>
-                    {data.close_approach_data.map(e => {
+                    {data.close_approach_data.map((e, idx) => {
                         return (
-                            <tr>
+                            <tr key={idx}>
                                 <td>{e.close_approach_date}</td>
                                 <td>{e.orbiting_body}</td>
                                 <td>{e.relative_velocity.kilometers_per_second}</td>

@@ -1,6 +1,6 @@
 
 export const fetchNeo = data => {
-    const api_key = 'CGRUzhnJsD9iW8xmbF24CYVSCtrMuUtqgixYhQrx'
+    const api_key = process.env.API_KEY
     const { start_date, end_date } = data
 
     const url = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${start_date}&end_date=${end_date}&api_key=${api_key}`
