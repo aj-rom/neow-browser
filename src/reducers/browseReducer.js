@@ -1,11 +1,11 @@
 const initialState = { error: '', isLoading: false, results: [] }
-export const searchReducer = ( state = initialState, action ) => {
+export const browseReducer = ( state = initialState, action ) => {
     switch (action.type) {
-        case 'SEARCH_LOADING':
+        case 'BROWSE_LOADING':
             return { ...state, isLoading: true}
-        case 'SET_SEARCH_RESULTS':
+        case 'SET_BROWSE_RESULTS':
             return { ...state, isLoading: false, results: action.payload, error: '' }
-        case 'SEARCH_ERROR':
+        case 'BROWSE_ERROR':
             return { ...state, error: action.payload, isLoading: false }
         default:
             return state
