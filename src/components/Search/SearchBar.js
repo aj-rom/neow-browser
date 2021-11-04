@@ -1,5 +1,7 @@
 import styles from './SearchBar.module.css'
 import {Component} from "react";
+import {connect} from "react-redux";
+import {fetchNeo} from "../../actions/SearchActions";
 
 class SearchBar extends Component {
 
@@ -50,4 +52,4 @@ class SearchBar extends Component {
     }
 }
 
-export default SearchBar
+export default connect(null, { fetchNeo })(SearchBar)

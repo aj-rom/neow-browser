@@ -1,5 +1,4 @@
 import SearchBar from "../../components/Search/SearchBar";
-import {fetchNeo} from "../../actions/SearchActions";
 import {connect} from "react-redux";
 import {Component} from "react";
 import styles from "./SearchContainer.module.css"
@@ -27,13 +26,13 @@ class SearchContainer extends Component {
         if (error) {
             return <div id='search'>
                 <div className={styles.error}>Error: {error}</div>
-                <SearchBar fetchNeo={fetchNeo}/>
+                <SearchBar/>
             </div>
         } else if (isLoading) {
             return <div aria-busy={true}>Loading...</div>
         } else {
             return <div id='search'>
-                <SearchBar fetchNeo={fetchNeo}/>
+                <SearchBar/>
                 <div className={styles.neoSection}>
                     { this.renderResults(results) }
                 </div>
@@ -43,9 +42,9 @@ class SearchContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    results: state.results,
-    isLoading: state.isLoading,
-    error: state.error
+    results: state.search.results,
+    isLoading: state.search.isLoading,
+    error: state.search.error
 })
 
-export default connect( mapStateToProps, ({ fetchNeo }))(SearchContainer)
+export default connect( mapStateToProps, null )(SearchContainer)
