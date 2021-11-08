@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Header from "../src/components/Header/Header";
+import NavBar from "../src/components/NavBar/NavBar";
 import Footer from "../src/components/Footer/Footer";
 
 
@@ -13,7 +13,7 @@ export default function Layout(props) {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             </Head>
 
-            <Header/>
+            <NavBar/>
                 {props.children}
             <Footer/>
         </>
