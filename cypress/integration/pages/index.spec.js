@@ -1,18 +1,26 @@
 
 describe('Page Loads', () => {
+    it('should have a valid route', () => {
+        cy.intercept(
+            {
+                method: 'GET',
+                url: '/',
+            }, []
+        ).as('getHomePage')
+    })
     it('should load header content', () => {
         cy.visit('http://localhost:3000')
 
-        cy.get('h1').contains('NeoW Browser')
-    })
-
-    it('should should have today\'s NEO as the starter', () =>  {
-        cy.contains(Date.now())
+        cy.get('h1').contains('Browser')
     })
 
     it('should include credits in footer', () => {
         cy.get('footer').contains('SpaceRocks')
         cy.get('footer').contains('A.J. Romaniello')
-        cy.get('footer').contains('Vercel')
     })
+})
+
+
+describe('can load feed data.', () => {
+
 })
