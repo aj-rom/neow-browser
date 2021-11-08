@@ -36,4 +36,5 @@ yarn-error.log*
 # IntelliJ
 /.idea
 
-/cypress/screenshots
+cypress/videos
+cypress/screenshots
