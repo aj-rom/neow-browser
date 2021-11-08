@@ -19,7 +19,6 @@ export default function Home() {
                     </h1>
                     <p>Detailed day by day browser of Near Earth Objects</p>
                 </div>
-                <Link href={{pathname: '/feed'}}>Feed</Link>
             </main>
         </div>
     )
