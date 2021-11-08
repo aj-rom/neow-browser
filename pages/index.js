@@ -15,7 +15,7 @@ export default function Home() {
             <main className={styles.main}>
                 <div className={styles.header}>
                     <h1>
-                        <b className={styles.b}>Browser</b>
+                        <b className={styles.b}>NeoW Browser</b>
                     </h1>
                     <p>Detailed day by day browser of Near Earth Objects</p>
                 </div>

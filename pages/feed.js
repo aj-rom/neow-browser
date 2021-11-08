@@ -2,7 +2,6 @@ import Meta from "../src/components/Meta/Meta";
 import styles from "../src/styles/Home.module.css";
 import SearchContainer from "../src/containers/Search/SearchContainer";
 
-
 export default function Feed() {
 
     const meta = {
@@ -16,7 +15,7 @@ export default function Feed() {
             <main className={styles.main}>
                 <div className={styles.header}>
                     <h1>
-                        <b className={styles.b}>NeoW Browser</b>
+                        <b className={styles.b}>NeoW Feed</b>
                     </h1>
                     <p>Search for objects currently near Earth.</p>
                 </div>
