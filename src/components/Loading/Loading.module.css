@@ -1,0 +1,22 @@
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading {
+    border-radius: 50%;
+    border: 10px solid var(--lightgrey);
+    border-top: 10px solid var(--blue);
+    height: 2rem;
+    width: 2rem;
+    animation: rotate 2s alternate infinite;
+}
+
+.center > p {
+    font-size: 85%;
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg);}
+}
