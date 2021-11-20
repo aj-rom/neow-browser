@@ -9,7 +9,7 @@ export default function NEO(props) {
             <header>
                 <h5 className={styles.h6}>{data.name}</h5>
                 <p>
-                    | <a href={data.links.self}>API Response</a> | <a href={data.nasa_jpl_url}>NASA JPL</a> |
+                    | <a href={data.links.self}>API Response</a> |
                 </p>
             </header>
             <details>

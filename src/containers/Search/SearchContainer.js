@@ -1,43 +1,41 @@
 import SearchBar from "../../components/Search/SearchBar";
 import {connect} from "react-redux";
-import {Component} from "react";
 import styles from "./SearchContainer.module.css"
 import NEO from "../../components/NEO/NEO";
+import Loading from "../../components/Loading/Loading";
 
-class SearchContainer extends Component {
+function SearchContainer(props) {
 
-    renderResults(results) {
+    const { error, isLoading, results } = props
+
+    function renderResults(results) {
         return Object.entries(results).map((data, idx) => {
             const key = data[0]
             const list = data[1]
+            let mapped = list.map((e, i) => { return <NEO key={i} data={e}/> })
             return (
                 <div key={idx} className={styles.daySection}>
                     <h4>{key}</h4>
-                    {list.map((e, i) => {
-                        return <NEO key={i} data={e}/>
-                    })}
+                    {mapped}
                 </div>
             )
         })
     }
 
-    render() {
-        const { error, isLoading, results } = this.props
-        if (error) {
-            return <div id='search'>
-                <div className={styles.error}>Error: {error}</div>
-                <SearchBar/>
+    if (error) {
+        return <div id='search'>
+            <div className={styles.error}>Error: {error}</div>
+            <SearchBar/>
+        </div>
+    } else if (isLoading) {
+        return <Loading/>
+    } else {
+        return <div id='search'>
+            <SearchBar/>
+            <div className={styles.neoSection}>
+                { renderResults(results) }
             </div>
-        } else if (isLoading) {
-            return <div aria-busy={true}>Loading...</div>
-        } else {
-            return <div id='search'>
-                <SearchBar/>
-                <div className={styles.neoSection}>
-                    { this.renderResults(results) }
-                </div>
-            </div>
-        }
+        </div>
     }
 }
 

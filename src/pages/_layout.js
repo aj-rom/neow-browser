@@ -1,6 +1,6 @@
 import Head from "next/head";
-import NavBar from "../src/components/NavBar/NavBar";
-import Footer from "../src/components/Footer/Footer";
+import NavBar from "../components/NavBar/NavBar";
+import Footer from "../components/Footer/Footer";
 
 
 export default function Layout(props) {
