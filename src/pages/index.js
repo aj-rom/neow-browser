@@ -1,6 +1,7 @@
-import styles from '../src/styles/Home.module.css'
+import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import Meta from "../src/components/Meta/Meta";
+import Meta from "../components/Meta/Meta";
+import BrowseContainer from "../containers/Browse/BrowseContainer";
 
 export default function Home() {
 
@@ -18,6 +19,8 @@ export default function Home() {
                         <b className={styles.b}>NeoW Browser</b>
                     </h1>
                     <p>Detailed day by day browser of Near Earth Objects</p>
+
+                    <BrowseContainer/>
                 </div>
             </main>
         </div>

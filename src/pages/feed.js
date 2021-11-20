@@ -1,6 +1,6 @@
-import Meta from "../src/components/Meta/Meta";
-import styles from "../src/styles/Home.module.css";
-import SearchContainer from "../src/containers/Search/SearchContainer";
+import Meta from "../components/Meta/Meta";
+import styles from "../styles/Home.module.css";
+import SearchContainer from "../containers/Search/SearchContainer";
 
 export default function Feed() {
 
