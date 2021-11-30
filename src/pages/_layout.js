@@ -1,7 +1,7 @@
 import Head from "next/head";
 import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function Layout(props) {
     return (
@@ -13,9 +13,11 @@ export default function Layout(props) {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             </Head>
 
-            <NavBar/>
+            <div className='container-fluid'>
+                <NavBar/>
                 {props.children}
-            <Footer/>
+                <Footer/>
+            </div>
         </>
     )
 }
