@@ -1,4 +1,5 @@
 import styles from './NEO.module.css'
+
 export default function NEO(props) {
 
     const { data } = props

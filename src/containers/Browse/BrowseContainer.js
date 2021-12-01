@@ -1,6 +1,5 @@
 import Error from "../../components/Error/Error";
-import Loading from "../../components/Loading/Loading";
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 
 function BrowseContainer(props) {
     const { error, isLoading, result } = props
