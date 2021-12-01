@@ -1,6 +1,5 @@
-import { useRouter } from "next/router";
+import {useRouter} from "next/router";
 import Link from "next/link";
-import styles from "./NavLink.module.css";
 
 export default function NavLink(props) {
     const router = useRouter()
@@ -10,8 +9,8 @@ export default function NavLink(props) {
 
     return (
         <li className={isActive()}>
-            <Link className={styles.link} href={props.link}>
-                <a>{ props.children }</a>
+            <Link href={props.link.pathname}>
+                <a className='nav-link'>{ props.children }</a>
             </Link>
         </li>
     )

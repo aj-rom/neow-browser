@@ -2,7 +2,7 @@ import '../styles/globals.css'
 
 import { Provider } from 'react-redux'
 import thunk from "redux-thunk";
-import { createStore, compose, applyMiddleware } from "@reduxjs/toolkit";
+import { applyMiddleware, compose, createStore } from "@reduxjs/toolkit";
 import rootReducer from "../reducers/rootReducer";
 import Layout from "./_layout";
 

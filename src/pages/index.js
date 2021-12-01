@@ -1,5 +1,4 @@
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 import Meta from "../components/Meta/Meta";
 import BrowseContainer from "../containers/Browse/BrowseContainer";
 
