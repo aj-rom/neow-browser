@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css'
-import Meta from "../components/Meta/Meta";
-import BrowseContainer from "../containers/Browse/BrowseContainer";
+import Meta from "../components/Meta/Meta"
+import BrowseContainer from "../containers/Browse/BrowseContainer"
+import { Container } from "react-bootstrap"
 
 export default function Home() {
 
@@ -10,7 +11,7 @@ export default function Home() {
     }
 
     return (
-        <div className={styles.container}>
+        <Container>
             <Meta title='Home' meta={pageMeta}/>
             <main className={styles.main}>
                 <div className={styles.header}>
@@ -22,6 +23,6 @@ export default function Home() {
                     <BrowseContainer/>
                 </div>
             </main>
-        </div>
+        </Container>
     )
 }

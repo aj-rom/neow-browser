@@ -1,7 +1,8 @@
-import Head from "next/head";
-import NavBar from "../components/NavBar/NavBar";
-import Footer from "../components/Footer/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { Container } from "react-bootstrap"
+import Head from "next/head";
+import NavBar from "../components/NavBar/NavBar"
+import Footer from "../components/Footer/Footer"
 
 export default function Layout(props) {
     return (
@@ -9,15 +10,15 @@ export default function Layout(props) {
             <Head>
                 <meta charSet="UTF-8"/>
                 <link rel="icon" href="./favicon.ico" />
-                <meta name="author" content="John Doe"/>
+                <meta name="author" content="A.J. Romaniello"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             </Head>
 
-            <div className='container-fluid'>
+            <Container fluid>
                 <NavBar/>
                 {props.children}
                 <Footer/>
-            </div>
+            </Container>
         </>
     )
 }

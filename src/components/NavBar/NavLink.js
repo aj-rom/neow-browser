@@ -1,17 +1,15 @@
-import {useRouter} from "next/router";
-import Link from "next/link";
+import { useRouter } from "next/router"
+import { Nav } from 'react-bootstrap'
 
 export default function NavLink(props) {
     const router = useRouter()
     const isActive = () => {
-        return props.link.pathname === router.pathname ? "nav-item active" : "nav-item";
+        return props.href.pathname === router.pathname ? "nav-item active" : "nav-item";
     }
 
     return (
-        <li className={isActive()}>
-            <Link href={props.link.pathname}>
-                <a className='nav-link'>{ props.children }</a>
-            </Link>
-        </li>
+        <Nav.Link href={props.href.pathname} className={isActive()}>
+            { props.children }
+        </Nav.Link>
     )
 }

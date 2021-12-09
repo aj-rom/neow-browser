@@ -1,4 +1,5 @@
 import styles from './NEO.module.css'
+import BootstrapTable from "../Table/Table"
 
 export default function NEO(props) {
 
@@ -23,7 +24,7 @@ export default function NEO(props) {
                 </ul>
 
                 <h6 className={styles.h6}>Estimated Diameter</h6>
-                <table>
+                <BootstrapTable striped bordered hover>
                     <thead>
                         <tr>
                             <th>Unit</th>
@@ -53,10 +54,10 @@ export default function NEO(props) {
                             <td>{diameter.miles.estimated_diameter_max}</td>
                         </tr>
                     </tbody>
-                </table>
+                </BootstrapTable>
 
                 <h6 className={styles.h6}>Close Approach Data</h6>
-                <table>
+                <BootstrapTable>
                     <thead>
                         <tr>
                             <th>Date</th>
@@ -66,18 +67,18 @@ export default function NEO(props) {
                         </tr>
                     </thead>
                     <tbody>
-                    {/*{data.close_approach_data.map((e, idx) => {*/}
-                    {/*    return (*/}
-                    {/*        <tr key={idx}>*/}
-                    {/*            <td>{e.close_approach_date}</td>*/}
-                    {/*            <td>{e.orbiting_body}</td>*/}
-                    {/*            <td>{e.relative_velocity.kilometers_per_second}</td>*/}
-                    {/*            <td>{e.miss_distance.lunar}</td>*/}
-                    {/*        </tr>*/}
-                    {/*    )*/}
-                    {/*})}*/}
+                    {data.close_approach_data.map((e, idx) => {
+                        return (
+                            <tr key={idx}>
+                                <td>{e.close_approach_date}</td>
+                                <td>{e.orbiting_body}</td>
+                                <td>{e.relative_velocity.kilometers_per_second}</td>
+                                <td>{e.miss_distance.lunar}</td>
+                            </tr>
+                        )
+                    })}
                     </tbody>
-                </table>
+                </BootstrapTable>
             </details>
         </article>
     )

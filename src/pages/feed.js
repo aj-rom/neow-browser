@@ -1,15 +1,16 @@
 import Meta from "../components/Meta/Meta";
 import styles from "../styles/Home.module.css";
 import SearchContainer from "../containers/Search/SearchContainer";
+import { Container } from "react-bootstrap";
 
 export default function Feed() {
 
     const meta = {
-        description: 'Test'
+        description: "Search NEO's within a given range of dates."
     }
 
     return (
-        <div className={styles.container}>
+        <Container>
 
             <Meta title='Feed' meta={meta}/>
             <main className={styles.main}>
@@ -22,6 +23,6 @@ export default function Feed() {
                 <SearchContainer/>
             </main>
 
-        </div>
+        </Container>
     )
 }

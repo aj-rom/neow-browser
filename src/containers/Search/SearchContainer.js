@@ -1,8 +1,10 @@
-import SearchBar from "../../components/Search/SearchBar";
-import {connect} from "react-redux";
+import { connect } from "react-redux"
+import { Container } from "react-bootstrap"
+import SearchBar from "../../components/Search/SearchBar"
 import styles from "./SearchContainer.module.css"
-import NEO from "../../components/NEO/NEO";
-import Loading from "../../components/Loading/Loading";
+import NEO from "../../components/NEO/NEO"
+import Loading from "../../components/Loading/Loading"
+import Error from "../../components/Error/Error"
 
 function SearchContainer(props) {
 
@@ -14,17 +16,17 @@ function SearchContainer(props) {
             const list = data[1]
             let mapped = list.map((e, i) => { return <NEO key={i} data={e}/> })
             return (
-                <div key={idx} className={styles.daySection}>
+                <Container fluid='lg' key={idx} className={styles.daySection}>
                     <h4>{key}</h4>
                     {mapped}
-                </div>
+                </Container>
             )
         })
     }
 
     if (error) {
         return <div id='search'>
-            <div className={styles.error}>Error: {error}</div>
+            <Error error={error}/>
             <SearchBar/>
         </div>
     } else if (isLoading) {
@@ -32,9 +34,9 @@ function SearchContainer(props) {
     } else {
         return <div id='search'>
             <SearchBar/>
-            <div className={styles.neoSection}>
+            <Container fluid='md' className='m-2'>
                 { renderResults(results) }
-            </div>
+            </Container>
         </div>
     }
 }
