@@ -1,7 +1,8 @@
 .daySection {
     background-color: #b9b9b9;
     border-bottom: 2px solid black;
-    padding: 1rem
+    padding: 1rem;
+    width: 100%;
 }
 
 .daySection h4 {
