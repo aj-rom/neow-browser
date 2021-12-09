@@ -13,3 +13,17 @@ Thanks to the hard work from [The SpaceRocks Team](https://github.com/SpaceRocks
 
 ## Improvements
 * Should make use of the 'browse' feature of the API: https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY
+
+## Contributing
+
+### Getting Started
+
+To get started contributing to this project, clone this repository and then navigate into the repositories directory.
+
+    $ cd neow-browser
+    
+Next, you must install required dependencies via NPM or yarn:
+    
+    $ npm i
+    
+Finally, to get data from NASA's API you must [generate an API Key](https://api.nasa.gov/). Next, paste this API key into the `/.env.local` file. 
