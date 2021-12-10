@@ -10,7 +10,7 @@ export default function Feed() {
   }
 
   return (
-    <Container>
+    <>
       <Meta title='Feed' meta={meta}/>
       <Main>
         <PageTitle title='NEO Feed'>
@@ -18,6 +18,6 @@ export default function Feed() {
         </PageTitle>
         <SearchContainer/>
       </Main>
-    </Container>
+    </>
   )
 }
