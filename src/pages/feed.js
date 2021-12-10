@@ -1,6 +1,5 @@
 import Meta from '../components/Meta'
 import SearchContainer from '../containers/Search/SearchContainer'
-import { Container } from 'react-bootstrap'
 import PageTitle from '../components/PageTitle'
 import Main from '../components/Main'
 
@@ -10,7 +9,7 @@ export default function Feed() {
   }
 
   return (
-    <Container>
+    <>
       <Meta title='Feed' meta={meta}/>
       <Main>
         <PageTitle title='NEO Feed'>
@@ -18,6 +17,6 @@ export default function Feed() {
         </PageTitle>
         <SearchContainer/>
       </Main>
-    </Container>
+    </>
   )
 }

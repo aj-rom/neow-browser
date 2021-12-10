@@ -14,7 +14,7 @@ export default function Layout(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </Head>
 
-      <Container fluid>
+      <Container fluid='xxl'>
         <NavBar/>
         {props.children}
         <Footer/>

@@ -19,7 +19,9 @@ function SearchContainer(props) {
         <Accordion
           key={idx}
           className='my-3 p-4 bg-dark border-bottom border-dark rounded'
-          defaultActiveKey={list[0].id}>
+          defaultActiveKey={list[0].id}
+          style={{ minWidth: '300px' }}
+        >
           <Row>
             <Col md={4}>
               <h4 className='p-2 text-light border-bottom border-light'>{key}</h4>
@@ -42,12 +44,18 @@ function SearchContainer(props) {
     return <Loading/>
   } else {
     return (
-      <div id='search'>
-        <SearchBar/>
-        <Container fluid='md' className='m-2'>
-          { renderResults(results) }
-        </Container>
-      </div>
+      <Container id='search'>
+        <Row>
+          <Col className='d-flex justify-content-center' style={{ minWidth: '300px' }}>
+            <SearchBar/>
+          </Col>
+        </Row>
+        <Row>
+          <Col className='d-inline-block justify-content-center' style={{ minWidth: '300px' }}>
+            { renderResults(results) }
+          </Col>
+        </Row>
+      </Container>
     )
   }
 }

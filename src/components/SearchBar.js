@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchNeo } from '../actions/SearchActions'
-import { Button, Container, Form } from 'react-bootstrap'
+import { Button, Form } from 'react-bootstrap'
 
 class SearchBar extends Component {
     state = { start_date: '', end_date: '' }
@@ -25,8 +25,12 @@ class SearchBar extends Component {
 
     render() {
       return (
-        <Container className='my-2 d-flex justify-content-center'>
-          <Form id='search' className='w-75 p-4 bg-dark text-white rounded-3'>
+        <div className='container-fluid d-flex justify-content-center'>
+          <Form
+            id='search'
+            className='w-75 p-4 bg-dark text-white rounded-3'
+            style={{ minWidth: '300px' }}
+          >
             <Form.Group className='mb-4'>
               <Form.Label>Start Date</Form.Label>
               <Form.Control id='start_date'
@@ -54,7 +58,7 @@ class SearchBar extends Component {
                 onClick={ (e) => this.handleSubmit(e)}>Search</Button>
             </div>
           </Form>
-        </Container>
+        </div>
       )
     }
 }
