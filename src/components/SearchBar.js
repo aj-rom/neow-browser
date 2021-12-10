@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchNeo } from '../actions/SearchActions'
-import { Button, Container, Form } from 'react-bootstrap'
+import { Button, Form } from 'react-bootstrap'
 
 class SearchBar extends Component {
     state = { start_date: '', end_date: '' }
