@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container } from 'react-bootstrap'
 import Head from 'next/head'
-import NavBar from '../components/NavBar/NavBar'
+import NavBar from '../components/NavBar'
 import Footer from '../components/Footer/Footer'
 
 export default function Layout(props) {
