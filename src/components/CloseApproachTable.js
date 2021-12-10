@@ -1,4 +1,4 @@
-import BootstrapTable from '../Table/Table'
+import BootstrapTable from './Table'
 
 export default function CloseApproachTable(props) {
   function renderTableBody() {

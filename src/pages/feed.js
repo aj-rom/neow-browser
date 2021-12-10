@@ -1,8 +1,8 @@
-import Meta from '../components/Meta/Meta'
+import Meta from '../components/Meta'
 import SearchContainer from '../containers/Search/SearchContainer'
 import { Container } from 'react-bootstrap'
-import PageTitle from '../components/PageTitle/PageTitle'
-import Main from '../components/Main/Main'
+import PageTitle from '../components/PageTitle'
+import Main from '../components/Main'
 
 export default function Feed() {
   const meta = {

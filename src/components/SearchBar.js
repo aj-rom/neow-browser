@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchNeo } from '../../actions/SearchActions'
+import { fetchNeo } from '../actions/SearchActions'
 import { Button, Container, Form } from 'react-bootstrap'
 
 class SearchBar extends Component {

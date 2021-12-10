@@ -1,31 +1,29 @@
-import Error from "../../components/Error/Error";
-import { connect } from "react-redux";
+import Error from '../../components/Error'
+import { connect } from 'react-redux'
 
 function BrowseContainer(props) {
-    const { error, isLoading, result } = props
+  const { error, isLoading, result } = props
 
-    if (error) {
-        return (
-            <BrowseWrap>
-                <Error error={error}/>
-            {/*    add rest of browse components */}
-            </BrowseWrap>
-        )
-    } else if (isLoading) {
-
-    }
-
+  if (error) {
     return (
-        <BrowseWrap>
-
-        </BrowseWrap>
+      <BrowseWrap>
+        <Error error={error}/>
+        {/*    add rest of browse components */}
+      </BrowseWrap>
     )
+  } else if (isLoading) {
 
+  }
 
+  return (
+    <BrowseWrap>
+
+    </BrowseWrap>
+  )
 }
 
 const BrowseWrap = (props) => {
-    return <div id='browse'>{ props.children }</div>
+  return <div id='browse'>{ props.children }</div>
 }
 
 export default connect(null, null)(BrowseContainer)

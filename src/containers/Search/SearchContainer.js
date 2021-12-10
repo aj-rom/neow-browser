@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
 import { Accordion, Col, Container, Row } from 'react-bootstrap'
-import SearchBar from '../../components/Search/SearchBar'
-import NEO from '../../components/NEO/NEO'
+import SearchBar from '../../components/SearchBar'
+import NEO from '../../components/NEO'
 import Loading from '../../components/Loading/Loading'
-import Error from '../../components/Error/Error'
+import Error from '../../components/Error'
 
 function SearchContainer(props) {
   const { error, isLoading, results } = props
