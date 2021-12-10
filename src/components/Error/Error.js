@@ -1,11 +1,11 @@
 import styles from './Error.module.css'
 
 export default function Error(props) {
-    const { error } = props
+  const { error } = props
 
-    return (
-        <div className={styles.error}>
-            { error }
-        </div>
-    )
+  return (
+    <div className={styles.error}>
+      { error }
+    </div>
+  )
 }
