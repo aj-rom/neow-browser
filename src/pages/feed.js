@@ -1,7 +1,8 @@
 import Meta from '../components/Meta/Meta'
-import styles from '../styles/Home.module.css'
 import SearchContainer from '../containers/Search/SearchContainer'
 import { Container } from 'react-bootstrap'
+import PageTitle from '../components/PageTitle/PageTitle'
+import Main from '../components/Main/Main'
 
 export default function Feed() {
   const meta = {
@@ -10,18 +11,13 @@ export default function Feed() {
 
   return (
     <Container>
-
       <Meta title='Feed' meta={meta}/>
-      <main className={styles.main}>
-        <div className={styles.header}>
-          <h1>
-            <b className={styles.b}>NeoW Feed</b>
-          </h1>
-          <p>Search for objects currently near Earth.</p>
-        </div>
+      <Main>
+        <PageTitle title='NEO Feed'>
+          Search for objects currently near Earth.
+        </PageTitle>
         <SearchContainer/>
-      </main>
-
+      </Main>
     </Container>
   )
 }

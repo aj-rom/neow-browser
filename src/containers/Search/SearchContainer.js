@@ -1,7 +1,6 @@
 import { connect } from 'react-redux'
-import { Accordion, Card, CardGroup, Col, Container, Row } from 'react-bootstrap'
+import { Accordion, Col, Container, Row } from 'react-bootstrap'
 import SearchBar from '../../components/Search/SearchBar'
-import styles from './SearchContainer.module.css'
 import NEO from '../../components/NEO/NEO'
 import Loading from '../../components/Loading/Loading'
 import Error from '../../components/Error/Error'
@@ -19,10 +18,12 @@ function SearchContainer(props) {
       return (
         <Accordion
           key={idx}
-          className={styles.daySection}
+          className='my-3 p-4 bg-dark border-bottom border-dark rounded'
           defaultActiveKey={list[0].id}>
           <Row>
-            <Col md={4}><h4>{key}</h4></Col>
+            <Col md={4}>
+              <h4 className='p-2 text-light border-bottom border-light'>{key}</h4>
+            </Col>
           </Row>
           { mapped }
         </Accordion>

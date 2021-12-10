@@ -1,79 +1,11 @@
 :root {
-  --blue: #0070f3;
-  --lightgrey: lightgray;
+  --blue: var(--bs-primary);
+  --lightgrey: var(--bs-gray);
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-size: 1rem;
-  font-family: Roboto, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: var(--blue);
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Typography */
-h1 { font-size: 2.5rem }
-h2 { font-size: 2.25rem }
-h3 { font-size: 2rem }
-h4 { font-size: 1.75rem }
-h5 { font-size: 1.5rem }
-h6 { font-size: 1.25rem }
-p, label, li { font-size: 1rem }
-table { font-size: .75rem}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-}
-
-thead {
-  font-weight: bold;
-  border-bottom: 2px solid black;
-}
-
-table, th, td {
-  border: 1px solid black;
-}
-
-@media (min-width: 576px) {
-  /* Typography */
-  h1 { font-size: 2.75rem }
-  h2 { font-size: 2.5rem }
-  h3 { font-size: 2.25rem }
-  h4 { font-size: 2rem }
-  h5 { font-size: 1.75rem }
-  h6 { font-size: 1.5rem }
-  p, label, li { font-size: 1.25rem }
-  table { font-size: 1rem}
-}
-
-@media (min-width: 768px) {
-  /* Typography */
-  h1 { font-size: 3rem }
-  h2 { font-size: 2.75rem }
-  h3 { font-size: 2.5rem }
-  h4 { font-size: 2.25rem }
-  h5 { font-size: 2rem }
-  h6 { font-size: 1.75rem }
-  p, label, li { font-size: 1.5rem }
-  table { font-size: 1.25rem}
-}
-
-@media (min-width: 992px) {
-
-}
-
-@media (min-width: 1200px) {
-
+  font-family: var(--bs-body-font-family)
 }

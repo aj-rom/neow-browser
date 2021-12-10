@@ -1,10 +1,8 @@
-import styles from './Error.module.css'
-
 export default function Error(props) {
   const { error } = props
 
   return (
-    <div className={styles.error}>
+    <div className='text-lg-center text-danger'>
       { error }
     </div>
   )

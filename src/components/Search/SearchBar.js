@@ -1,4 +1,3 @@
-import styles from './SearchBar.module.css'
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchNeo } from '../../actions/SearchActions'
@@ -26,9 +25,9 @@ class SearchBar extends Component {
 
     render() {
       return (
-        <Container className='my-2 row justify-content-center'>
-          <Form id='search' className={`w-75 p-2 ${styles.form}`}>
-            <Form.Group className="mb-2">
+        <Container className='my-2 d-flex justify-content-center'>
+          <Form id='search' className='w-75 p-4 bg-dark text-white rounded-3'>
+            <Form.Group className='mb-4'>
               <Form.Label>Start Date</Form.Label>
               <Form.Control id='start_date'
                 type='date'
@@ -36,9 +35,8 @@ class SearchBar extends Component {
                 value={this.state.start_date}
                 size='sm'
               />
-              <Form.Text className='text-muted'>The starting date.</Form.Text>
             </Form.Group>
-            <Form.Group className="mb-2">
+            <Form.Group className='mb-4'>
               <Form.Label>End Date</Form.Label>
               <Form.Control
                 id='end_date'
@@ -47,12 +45,11 @@ class SearchBar extends Component {
                 value={this.state.end_date}
                 size='sm'
               />
-              <Form.Text className='text-muted'>The ending date.</Form.Text>
             </Form.Group>
-            <div className='row justify-content-center'>
+            <div className='d-flex justify-content-center'>
               <Button
-                className='w-75'
-                variant='primary'
+                className='w-50'
+                variant='outline-light'
                 type='submit'
                 onClick={ (e) => this.handleSubmit(e)}>Search</Button>
             </div>

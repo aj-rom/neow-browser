@@ -1,4 +1,3 @@
-import styles from './NEO.module.css'
 import DiameterTable from './DiameterTable'
 import CloseApproachTable from './CloseApproachTable'
 import { Accordion } from 'react-bootstrap'
@@ -14,11 +13,11 @@ export default function NEO(props) {
   } = data
 
   return (
-    <Accordion.Item className={`${styles.neo}`} eventKey={data.id}>
+    <Accordion.Item className='bg-light' eventKey={data.id}>
       <Accordion.Header>{ data.name }</Accordion.Header>
 
       <Accordion.Body>
-        <ul>
+        <ul className='list-unstyled text=dark'>
           <li><b>ID</b>: {data.id}</li>
           <li><b>Absolute Magnitude</b>: {absolute_magnitude_h}</li>
           <li><b>Sentry Object</b>: {is_sentry_object.toString()}</li>
@@ -27,10 +26,10 @@ export default function NEO(props) {
           </li>
         </ul>
 
-        <h6 className='my-2 p-1'>Estimated Diameter</h6>
+        <h4 className='my-2 px-0 pb-1 text-dark'>Estimated Diameter</h4>
         <DiameterTable diameter={estimated_diameter}/>
 
-        <h6 className='my-2 p-1'>Close Approach Data</h6>
+        <h4 className='my-2 px-0 pb-1 text-dark'>Close Approach Data</h4>
         <CloseApproachTable data={close_approach_data}/>
       </Accordion.Body>
     </Accordion.Item>
