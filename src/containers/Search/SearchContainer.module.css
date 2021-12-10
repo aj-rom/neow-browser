@@ -1,11 +1,19 @@
 .daySection {
-    background-color: #b9b9b9;
-    border-bottom: 2px solid black;
+    background-color: var(--bs-body-color);
+    border-bottom: 2px solid var(--bs-dark);
+    border-radius: 4px;
     padding: 1rem;
     width: 100%;
 }
 
 .daySection h4 {
-    border-bottom: 2px solid darkgray;
+    color: var(--bs-white);
+    border-bottom: 2px solid var(--bs-light);
     padding: 1rem
+}
+
+.neos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }

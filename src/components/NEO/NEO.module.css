@@ -1,6 +1,11 @@
 
 .neo {
-   list-style-type: none;
+    list-style-type: none;
+    border: 1px solid var(--bs-dark);
+    border-radius: 4px;
+    background-color: var(--bs-light);
+    min-width: 200px;
+    flex-grow: 1;
 }
 
 .h6 {

@@ -13,23 +13,22 @@ export default function NEO(props) {
   } = data
 
   return (
-    <article className={styles.neo}>
+    <article className={`m-4 p-4 ${styles.neo}`}>
       <header>
         <h5 className={styles.h6}>{data.name}</h5>
-        <p>
-                    | <a href={data.links.self}>API Response</a> |
-        </p>
       </header>
+
+      <ul>
+        <li><b>ID</b>: {data.id}</li>
+        <li><b>Absolute Magnitude</b>: {absolute_magnitude_h}</li>
+        <li><b>Sentry Object</b>: {is_sentry_object.toString()}</li>
+        <li>
+          <b>Hazardous</b>: {is_potentially_hazardous_asteroid.toString()}
+        </li>
+      </ul>
+
       <details>
         <summary>More Info</summary>
-        <ul>
-          <li><b>ID</b>: {data.id}</li>
-          <li><b>Absolute Magnitude</b>: {absolute_magnitude_h}</li>
-          <li><b>Sentry Object</b>: {is_sentry_object.toString()}</li>
-          <li>
-            <b>Hazardous</b>: {is_potentially_hazardous_asteroid.toString()}
-          </li>
-        </ul>
 
         <h6 className={styles.h6}>Estimated Diameter</h6>
         <DiameterTable diameter={estimated_diameter}/>
