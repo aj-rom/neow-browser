@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { Card, CardGroup, Col, Container, Row } from 'react-bootstrap'
+import { Accordion, Card, CardGroup, Col, Container, Row } from 'react-bootstrap'
 import SearchBar from '../../components/Search/SearchBar'
 import styles from './SearchContainer.module.css'
 import NEO from '../../components/NEO/NEO'
@@ -17,14 +17,15 @@ function SearchContainer(props) {
         return <NEO key={i} data={e}/>
       })
       return (
-        <Container fluid='lg' key={idx} className={`my-2 ${styles.daySection}`}>
+        <Accordion
+          key={idx}
+          className={styles.daySection}
+          defaultActiveKey={list[0].id}>
           <Row>
             <Col md={4}><h4>{key}</h4></Col>
           </Row>
-          <Container fluid className='d-flex flex-lg-row flex-wrap justify-content-around'>
-            { mapped }
-          </Container>
-        </Container>
+          { mapped }
+        </Accordion>
       )
     })
   }

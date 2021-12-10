@@ -1,6 +1,7 @@
 import styles from './NEO.module.css'
 import DiameterTable from './DiameterTable'
 import CloseApproachTable from './CloseApproachTable'
+import { Accordion } from 'react-bootstrap'
 
 export default function NEO(props) {
   const { data } = props
@@ -13,29 +14,25 @@ export default function NEO(props) {
   } = data
 
   return (
-    <article className={`m-4 p-4 ${styles.neo}`}>
-      <header>
-        <h5 className={styles.h6}>{data.name}</h5>
-      </header>
+    <Accordion.Item className={`${styles.neo}`} eventKey={data.id}>
+      <Accordion.Header>{ data.name }</Accordion.Header>
 
-      <ul>
-        <li><b>ID</b>: {data.id}</li>
-        <li><b>Absolute Magnitude</b>: {absolute_magnitude_h}</li>
-        <li><b>Sentry Object</b>: {is_sentry_object.toString()}</li>
-        <li>
-          <b>Hazardous</b>: {is_potentially_hazardous_asteroid.toString()}
-        </li>
-      </ul>
+      <Accordion.Body>
+        <ul>
+          <li><b>ID</b>: {data.id}</li>
+          <li><b>Absolute Magnitude</b>: {absolute_magnitude_h}</li>
+          <li><b>Sentry Object</b>: {is_sentry_object.toString()}</li>
+          <li>
+            <b>Hazardous</b>: {is_potentially_hazardous_asteroid.toString()}
+          </li>
+        </ul>
 
-      <details>
-        <summary>More Info</summary>
-
-        <h6 className={styles.h6}>Estimated Diameter</h6>
+        <h6 className='my-2 p-1'>Estimated Diameter</h6>
         <DiameterTable diameter={estimated_diameter}/>
 
-        <h6 className={styles.h6}>Close Approach Data</h6>
+        <h6 className='my-2 p-1'>Close Approach Data</h6>
         <CloseApproachTable data={close_approach_data}/>
-      </details>
-    </article>
+      </Accordion.Body>
+    </Accordion.Item>
   )
 }
