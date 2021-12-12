@@ -26,7 +26,7 @@ Next, you must install required dependencies via NPM or yarn:
     
     $ npm i
     
-Finally, to get data from NASA's API you must [generate an API Key](https://api.nasa.gov/). Next, rename `.env.local.example` to `.env.local`, then paste this API key into the `/.env.local` file.
+Finally, to get data from NASA's API you must [generate an API Key](https://api.nasa.gov/). Next, copy the contents of `.env.local.example` to a new file `.env.local`, then paste this API key into the `/.env.local` file.
 
 ```YAML
 # Get a new API key at: https://api.nasa.gov/
